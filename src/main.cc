@@ -1,7 +1,13 @@
+#include "analyzer.h"
+
 #include <nan.h>
+#include <iostream>
 
 void Method(const Nan::FunctionCallbackInfo<v8::Value>& info)
 {
+  Analyzer analyzer;
+  std::cout << analyzer.getWorld() << std::endl;
+
   info.GetReturnValue().Set(Nan::New("world").ToLocalChecked());
 }
 
