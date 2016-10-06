@@ -8,5 +8,5 @@ Analyzer::Analyzer()
 
 std::string Analyzer::getWorld(void)
 {
-  return "world";
+  return "f*ng world";
 }

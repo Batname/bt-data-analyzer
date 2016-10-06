@@ -5,10 +5,8 @@
 
 void Method(const Nan::FunctionCallbackInfo<v8::Value>& info)
 {
-  Analyzer analyzer;
-  std::cout << analyzer.getWorld() << std::endl;
-
-  info.GetReturnValue().Set(Nan::New("world").ToLocalChecked());
+  Analyzer* analyzer = new Analyzer;
+  info.GetReturnValue().Set(Nan::New(analyzer->getWorld()).ToLocalChecked());
 }
 
 void Init(v8::Local<v8::Object> exports)
